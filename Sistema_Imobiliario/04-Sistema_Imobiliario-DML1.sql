@@ -1,0 +1,372 @@
+INSERT INTO cliente(id_cliente, nome_cliente, cpf_cliente, sexo)
+VALUES
+(1, 'Ana Souza', '12345678900', 'Feminino'),
+(2, 'Bruno Lima', '23456789011', 'Masculino'),
+(3, 'Carla Mendes', '34567890122', 'Feminino'),
+(4, 'Diego Ferreira', '45678901233', 'Masculino'),
+(5, 'Eduarda Martins', '56789012344', 'Feminino'),
+(6, 'Felipe Alves', '67890123455', 'Masculino'),
+(7, 'Gabriela Rocha', '78901234566', 'Feminino'),
+(8, 'Henrique Costa', '89012345677', 'Masculino'),
+(9, 'Isabela Nunes', '90123456788', 'Feminino'),
+(10, 'João Pereira', '01234567899', 'Masculino'),
+(11, 'Kleber Santos', '12312312311', 'Masculino'),
+(12, 'Larissa Oliveira', '23423423422', 'Feminino'),
+(13, 'Marcelo Ribeiro', '34534534533', 'Masculino'),
+(14, 'Natália Fernandes', '45645645644', 'Feminino'),
+(15, 'Otávio Gomes', '56756756755', 'Masculino');
+
+INSERT INTO corretor(id_corretor, nome_corretor, creci_corretor)
+VALUES
+(1, 'Voltaire', 'SP48291F'),
+(2, 'John Locke', 'RJ03957F'),
+(3, 'Montesquieu', 'MG72840F'),
+(4, 'Jean-Jacques Rousseau', 'RS15683F'),
+(5, 'Denis Diderot', 'BA90421F'),
+(6, 'Jean Le Rond d’Alembert', 'PE67235F'),
+(7, 'Adam Smith', 'CE11894F'),
+(8, 'Immanuel Kant', 'GO55072F'),
+(9, 'David Hume', 'PR84760F'),
+(10, 'Condorcet', 'SC23019F'),
+(11, 'Leslie', 'DF76543F');
+
+
+INSERT INTO etapa(codigo, nome_etapa, ordem)
+VALUES
+(1, 'visita', 1),
+(2, 'negociacao', 2),
+(3, 'providencia de documentos', 3),
+(4, 'pagamento', 4),
+(5, 'transferencia', 5),
+(6, 'entrega', 6);
+
+
+INSERT INTO imovel(id_imovel, endereco_cidade, endereco_logradouro, endereco_bairro, quantidade_quartos, quantidade_banheiros, lajotada, tamanho_quintal)
+VALUES
+(1, 'Madrid', 'Puerto Del Sol', 'Centro', 2, 1, 1, 'Médio'),
+(2, 'Milão', 'Piazza Del Duomo', 'Santa Maria Novella', 3, 2, 0, 'Médio'),
+(3, 'Bergen', 'Bryggen', 'Bryggen', 4, 3, 0, 'Grande'),
+(4, 'Bangkok', 'Khao San Road', 'Phra Nakhon', 3, 2, 0, 'Médio'),
+(5, 'Moscou', 'Praça Vermelha', 'Centro', 3, 1, 0, 'Médio'),
+(6, 'Berlim', 'Unter den Linden', 'Centro', 4, 3, 1, 'Grande'),
+(7, 'Luxemburgo', 'Praça da Constituição', 'Ville Haute', 2, 1, 0, 'Pequeno'),
+(8, 'Belo Horizonte', 'Avenida Afonso Pena', 'Centro', 2, 2, 1, 'Pequeno'),
+(9, 'Nuuk', 'Aqqusinersuaq', 'Nuuk Centrum', 3, 2, 0, 'Médio'),
+(10, 'Dallas', 'Dallas Arts District', 'Centro de Dallas', 1, 1, 1, 'Pequeno'),
+(11, 'Savanna-la-Mar', 'Westmoreland', 'Condado de Cornwall', 2, 1, 0, 'Médio'),
+(12, 'Brasília', 'Eixo Monumental', 'Plano Piloto', 3, 1, 1, 'Pequeno'),
+(13, 'Anápolis', 'Rua Engenheiro Portela', 'Jundiaí', 2, 1, 0, 'Médio'),
+(14, 'São Miguel do Araguaia', 'Praça Ouvídio Martins', 'Centro', 2, 2, 0, 'Médio'),
+(15, 'Cairo', 'Praça Tahrir', 'Centro', 1, 1, 0, 'Pequeno'),
+(16, 'Port Augusta', 'Eyre Highway', 'Port Augusta Sul', 2, 1, 0, 'Médio'),
+(17, 'Shinjuku', 'Golden Gai', 'Golden Gai', 3, 2, 0, 'Médio'),
+(18, 'Parauapebas', 'Nova Carajás', 'Nova Carajás', 4, 2, 1, 'Grande'),
+(19, 'Porto Velho', 'Rua Silvania', 'Nacional', 2, 2, 1, 'Pequeno'),
+(20, 'Goiânia', 'Praça Cívica', 'Setor Central', 1, 1, 0, 'Pequeno'),
+(21, 'Shinjuku', 'Próximo à Estação Shinjuku (Saída Oeste)', 'Nishi-Shinjuku', 3, 2, 1, 'Grande'),
+(22, 'Shinjuku', 'Rua do Isetan Department Store', 'Shinjuku-Sanchome', 3, 2, 0, 'Médio'),
+(23, 'Shinjuku', 'Próximo ao Godzilla Road', 'Kabukicho', 1, 1, 0, 'Pequeno'),
+(24, 'Shinjuku', 'Perto da Yotsuya-Sanchome', 'Yotsuya', 2, 1, 0, 'Pequeno'),
+(25, 'Belo Horizonte', 'Próximo à Praça da Savassi', 'Savassi', 2, 2, 1, 'Médio'),
+(26, 'Belo Horizonte', 'Perto do Parque Municipal', 'Centro', 1, 1, 1, 'Pequeno'),
+(27, 'Anápolis', 'Próximo à Praça Americano do Brasil', 'Centro', 2, 1, 0, 'Médio'),
+(28, 'Anápolis', 'Perto da Faculdade Anhanguera', 'Jundiaí', 2, 1, 0, 'Médio'),
+(29, 'Goiânia', 'Próximo ao Goiânia Shopping', 'Setor Bueno', 1, 1, 0, 'Pequeno'),
+(30, 'Goiânia', 'Próximo ao Goiânia Shopping', 'Setor Oeste', 1, 1, 0, 'Pequeno'),
+(31, 'Parauapebas', 'Próximo à Rodovia PA-275', 'Cidade Nova', 4, 2, 1, 'Grande'),
+(32, 'Parauapebas', 'Perto do Partage Shopping', 'Nova Carajás', 4, 2, 1, 'Grande'),
+(33, 'Madrid', 'Próximo ao Estádio Santiago Bernabéu', 'Chamartín', 2, 1, 1, 'Médio'),
+(34, 'Nuuk', 'Perto do Porto Antigo', 'Centrum (Centro)', 3, 2, 0, 'Médio'),
+(35, 'Cairo', 'Às margens do Rio Nilo', 'Zamalek', 4, 3, 0, 'Grande'),
+(36, 'Moscou', 'Próximo à Praça Pushkin', 'Tverskoy', 2, 1, 0, 'Médio'),
+(37, 'Moscou', 'Perto do Kremlin', 'Arbat', 1, 1, 0, 'Pequeno');
+
+INSERT INTO vistoria(id_vistoria, id_imovel, data_vistoria, detalhamento_vistoria, situacao_vistoria)
+VALUES
+(1, 2, '2025-05-23', 'Bom estado, parede branca sem rachadura', 'Ok'),
+(2, 3, '2020-09-21', 'Tintura está desgastada', 'Pintura'),
+(3, 1, '2010-06-23', 'Infiltração', 'Necessita reparo'),
+(4, 4, '2005-11-15', 'Bom estado', 'Ok'),
+(5, 5, '2006-02-03', 'Abandonado pelo cliente, houve uma infestação de ratos', 'Abandono de Cliente'),
+(6, 6, '2017-01-14', 'Bem cuidado, sem sinais de desordem ou necessidade de reparo', 'Ok'),
+(7, 8, '2018-07-19', 'Completamente sujo, um ambiente muito insalubre', 'Abandono de Cliente'),
+(8, 9, '2007-09-12', 'A cerâmica está rachada, precisa trocar o piso', 'Necessita reparo'),
+(9, 7, '2009-03-18', 'Bom estado, no entanto a parede contém diversos rabiscos à lápis', 'Pintura'),
+(10, 11, '2019-09-19', 'Excelente estado, boa limpeza e organização', 'Ok'),
+(11, 10, '2000-07-14', 'Ambiente um pouco sujo, no entanto se encontra em bom estado', 'Ok'),
+(12, 11, '1993-11-15', 'Cliente não foi encontrado, houve vandalização do imóvel', 'Abandono de Cliente'),
+(13, 2, '2003-07-07', 'As paredes foram quebradas, o encanamento está defeituoso', 'Necessita reparo'),
+(14, 15, '2001-08-01', 'Houve uma infiltração que acabou quebrando o gesso do teto', 'Necessita reparo'),
+(15, 14, '2013-05-30', 'Alagado e em péssimo estado, não foi encontrada a cliente', 'Necessita reparo'),
+(16, 13, '2012-09-19', 'Excelente estado', 'Ok'),
+(17, 12, '1998-02-24', 'Bom estado, bem cuidado', 'Ok'),
+(18, 1, '2010-12-23', 'Teto quebrou', 'Necessita reparo'),
+(19, 11, '2020-03-19', 'Encanamento defeituoso', 'Necessita reparo'),
+(20, 1, '2011-06-21', 'Piso com infiltração', 'Necessita reparo');
+
+
+INSERT INTO reparo(id_reparo, id_vistoria, data_reparo, descricao, valor_reparo)
+VALUES
+(1, 3, '2010-07-15','Reparado com sucesso da infiltração', 700.00),
+(2, 8, '2007-09-19','Ceramica foi trocada e colocada corretamente', 1500.00),
+(3, 13, '2003-09-07','Encanamento consertado e paredes subidas de volta', 4870.00),
+(4, 14, '2001-09-10','Infiltração foi consertada e o teto está seguro', 2000.00),
+(5, 15, '2013-06-05','Água foi retirada, tudo foi consertado e está funcionando', 1000.00),
+(6, 1, '2020-04-19','Teto foi consertado, gesso arrumado', 549.50),
+(7, 11, '2020-03-30','Encanamento foi trocado, funcionando normalmente agora', 5000.00),
+(8, 1, '2011-06-29','Infiltração foi resolvida e piso foi consertado e nivelado novamente', 980.00);
+
+INSERT INTO visita(id_visita, id_cliente, id_corretor, id_imovel, data_visita, classificacao, tipo_visita)
+VALUES
+(1, 8, 11, 15, '2010-08-29', 'Visita perdida', 'Compra'),
+(2, 9, 7, 14, '2001-09-09', 'Cliente em duvida', 'Compra'),
+(3, 4, 5, 13, '2020-10-31', 'Negocio Fechado', 'Compra'),
+(4, 3, 4, 12, '1999-12-05', 'Negocio Fechado', 'Aluguel'),
+(5, 15, 3, 11, '2005-09-10', 'Negocio Fechado', 'Aluguel'),
+(6, 5, 2, 9, '1998-05-30', 'Negocio Fechado', 'Compra'),
+(7, 10, 1, 10, '2007-09-14', 'Negocio Fechado', 'Compra'),
+(8, 11, 6, 9, '2001-02-01', 'Negocio Fechado', 'Compra'),
+(9, 1, 8, 9, '2002-12-12', 'Negocio Fechado', 'Compra'),
+(10, 2, 1, 8, '2000-09-20', 'Negocio Fechado', 'Compra'),
+(11, 8, 2, 7, '2015-10-31', 'Negocio Fechado', 'Compra'),
+(12, 14, 3, 1, '2000-12-25', 'Negocio Fechado', 'Aluguel'),
+(13, 6, 4, 2, '2010-08-17', 'Negocio Fechado', 'Compra'),
+(14, 13, 6, 14, '2020-10-02', 'Negocio Fechado', 'Aluguel'),
+(15, 1, 9, 13, '2010-07-14', 'Negocio Fechado', 'Aluguel'),
+(16, 2, 5, 10, '1999-08-27', 'Negocio Fechado', 'Compra'),
+(17, 3, 4, 5, '2024-08-23', 'Negocio Fechado', 'Aluguel'),
+(18, 4, 8, 7, '2008-10-09', 'Apenas estava pesquisando', 'Compra'),
+(19, 5, 9, 6, '2012-12-15', 'Apenas estava pesquisando', 'Compra'),
+(20, 6, 1, 8, '2018-03-25', 'Apenas estava pesquisando', 'Aluguel'),
+(21, 9, 4, 9, '2010-04-29', 'Apenas estava pesquisando', 'Aluguel'),
+(22, 15, 3, 20, '2002-02-27', 'Visita perdida', 'Aluguel'),
+(23, 3, 4, 7, '1991-05-02', 'Negocio Fechado', 'Compra'),
+(24, 2, 5, 20, '2020-03-20', 'Visita perdida', 'Compra'),
+(25, 6, 5, 20, '2022-12-15', 'Visita perdida', 'Compra'),
+(26, 3, 5, 20, '2021-10-02', 'Apenas estava pesquisando', 'Compra'),
+(27, 2, 7, 21, '2022-10-05', 'Negocio Fechado', 'Compra'),
+(28, 10, 9, 24, '2021-08-29', 'Negocio Fechado', 'Compra'),
+(29, 5, 4, 28, '2023-04-15', 'Negocio Fechado', 'Compra'),
+(30, 6, 2, 29, '2020-07-02', 'Negocio Fechado', 'Compra'),
+(31, 8, 1, 30, '2018-09-25', 'Negocio Fechado', 'Compra'),
+(32, 4, 5, 35, '2019-05-10', 'Negocio Fechado', 'Compra'),
+(33, 9, 11, 37, '2018-03-24', 'Negocio Fechado', 'Compra');
+
+INSERT INTO propriedade(id_imovel, id_cliente, data_inicio, data_fim)
+VALUES
+(5, 3, '2024-09-17', NULL),
+(10, 2, '1999-09-08', '2006-12-15'),
+(13, 1, '2022-08-15', NULL),
+(14, 13, '2020-10-10', NULL),
+(2, 6, '2010-09-11', '2012-08-24'),
+(1, 14, '2000-12-31', NULL),
+(7, 8, '2015-11-15', '2016-12-19'),
+(8, 2, '2000-11-15', '2017-11-15'),
+(9, 1, '2002-12-28', '2008-07-14'),
+(9, 11, '2001-02-25', '2002-08-19'),
+(10, 10, '2007-09-30', '2010-05-18'),
+(9, 5, '1998-06-10', '2000-08-15'),
+(11, 15, '2005-10-09', NULL),
+(12, 3, '1999-12-25', NULL),
+(13, 4, '2020-11-29', '2021-12-31'),
+(21, 2, '2022-10-24', NULL),
+(24, 10, '2021-09-13', NULL),
+(28, 5, '2023-05-04', NULL),
+(29, 6, '2020-07-24', NULL),
+(30, 8, '2018-10-14', NULL),
+(35, 4, '2019-05-29', NULL),
+(37, 9, '2018-04-13', NULL);
+
+INSERT INTO contrato(id_contrato, tipo_aluguel)
+VALUES
+(17, 1),
+(15, 1),
+(14, 1),
+(12, 1),
+(5, 1),
+(4, 1),
+
+(16, 0),
+(13, 0),
+(11, 0),
+(10, 0),
+(9, 0),
+(8, 0),
+(7, 0),
+(6, 0),
+(3, 0),
+(27, 0),
+(28, 0),
+(29, 0),
+(30, 0),
+(31, 0),
+(32, 0),
+(33, 0);
+
+
+INSERT INTO aluguel(id_contrato, data_entrada_cliente, data_fechamento_negocio, preco_aluguel)
+VALUES
+(17, '2024-09-20', '2024-09-15', 900.00),
+(15, '2010-07-14', '2010-07-14', 1500.00),
+(14, '2020-10-05', '2020-10-03', 799.00),
+(12, '2001-01-10', '2000-12-31', 490.00),
+(5, '2005-10-15', '2005-10-10', 3200.00),
+(4, '1999-12-08', '1999-12-06', 1000.00);
+
+INSERT INTO pagamento(id_pagamento, id_aluguel, data_pagamento, situacao_pagamento)
+VALUES
+(1, 17, '2024-10-15', 'Adiantada'),
+(2, 17, '2024-11-20', 'Pontual'),
+(3, 17, '2024-12-10', 'Adiantada'),
+(4, 17, '2025-01-21', 'Atrasada'),
+(5, 17, '2025-02-20', 'Pontual'),
+(6, 17, '2025-03-20', 'Pontual'),
+(7, 15, '2010-08-14', 'Pontual'),
+(8, 15, '2010-09-14', 'Pontual'),
+(9, 15, '2010-10-14', 'Pontual'),
+(10, 15, '2010-11-14', 'Pontual'),
+(11, 4, '2000-01-15', 'Atrasada'),
+(12, 4, '2000-02-12', 'Atrasada'),
+(13, 5, '2005-11-20', 'Atrasada'),
+(14, 5, '2005-12-25', 'Atrasada'),
+(15, 12, '2001-02-09', 'Adiantada'),
+(16, 12, '2001-03-09', 'Adiantada'),
+(17, 12, '2001-04-07', 'Adiantada'),
+(18, 14, '2020-11-04', 'Adiantada'),
+(19, 14, '2020-12-05', 'Pontual'),
+(20, 14, '2021-01-05', 'Pontual');
+
+INSERT INTO compra(id_contrato, observacao, preco_compra)
+VALUES
+(16, 'Parcelado', 50000.00),
+(13, 'Financiamento', 250000.00),
+(11, 'Fiador', 300000.00),
+(10, 'Parcelado', 99000.00),
+(9, 'Financiamento', 95000.00),
+(8, 'A vista', 180000.00),
+(7, 'Parcelado', 200000.00),
+(6, 'Financiamento', 75000.00),
+(3, 'A vista', 110000.00),
+(27, 'A vista', 115000.00),
+(28, 'A vista', 120000.00),
+(29, 'A vista', 46000.00),
+(30, 'Financiamento', 79000.00),
+(31, 'Financiamento', 85000.00),
+(32, 'Fiador', 200000.00),
+(33, 'Fiador', 95000.00);
+
+
+INSERT INTO envolve(data_inicial, codigo, id_contrato, data_final, observacoes)
+VALUES
+('1999-08-27', 1, 16, '1999-08-28', 'Experiência de visita concluída com sucesso.'),
+('1999-08-28', 2, 16, '1999-08-29', 'Negociação avançando para um final positivo.'),
+('1999-08-30', 3, 16, '1999-08-29', 'Documentação em providência, tudo certo.'),
+('1999-08-31', 4, 16, '1999-08-31', 'Etapa de pagamento devidamente finalizada.'),
+('1999-09-02', 5, 16, '1999-09-02', 'Transferência de titularidade registrada.'),
+('1999-09-04', 6, 16, '1999-09-07', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2010-09-06', 1, 13, '2010-09-06', 'Experiência de visita concluída com sucesso.'),
+('2010-09-07', 2, 13, '2010-09-07', 'Negociação avançando para um final positivo.'),
+('2010-09-08', 3, 13, '2010-09-08', 'Documentação em providência, tudo certo.'),
+('2010-09-09', 4, 13, '2010-09-09', 'Etapa de pagamento devidamente finalizada.'),
+('2010-09-10', 5, 13, '2010-09-11', 'Transferência de titularidade registrada.'),
+('2010-09-11', 6, 13, '2010-09-11', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2015-10-31', 1, 11, '2015-11-01', 'Experiência de visita concluída com sucesso.'),
+('2015-11-01', 2, 11, '2015-11-02', 'Negociação avançando para um final positivo.'),
+('2015-11-03', 3, 11, '2015-11-05', 'Documentação em providência, tudo certo.'),
+('2015-11-06', 4, 11, '2015-11-09', 'Etapa de pagamento devidamente finalizada.'),
+('2015-11-09', 5, 11, '2015-11-12', 'Transferência de titularidade registrada.'),
+('2015-11-14', 6, 11, '2015-11-15', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2000-09-20', 1, 10, '2000-09-21', 'Experiência de visita concluída com sucesso.'),
+('2000-09-22', 2, 10, '2000-09-25', 'Negociação avançando para um final positivo.'),
+('2000-09-27', 3, 10, '2000-09-28', 'Documentação em providência, tudo certo.'),
+('2000-09-29', 4, 10, '2000-09-29', 'Etapa de pagamento devidamente finalizada.'),
+('2000-09-30', 5, 10, '2000-10-01', 'Transferência de titularidade registrada.'),
+('2000-10-02', 6, 10, '2000-11-15', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2002-12-12', 1, 9, '2002-12-12', 'Experiência de visita concluída com sucesso.'),
+('2002-12-13', 2, 9, '2002-12-15', 'Negociação avançando para um final positivo.'),
+('2002-12-17', 3, 9, '2002-12-18', 'Documentação em providência, tudo certo.'),
+('2002-12-20', 4, 9, '2002-12-22', 'Etapa de pagamento devidamente finalizada.'),
+('2002-12-23', 5, 9, '2002-12-27', 'Transferência de titularidade registrada.'),
+('2002-12-27', 6, 9, '2002-12-28', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2001-02-01', 1, 8, '2001-02-01', 'Experiência de visita concluída com sucesso.'),
+('2001-02-04', 2, 8, '2001-02-06', 'Negociação avançando para um final positivo.'),
+('2001-02-07', 3, 8, '2001-02-07', 'Documentação em providência, tudo certo.'),
+('2001-02-09', 4, 8, '2001-02-10', 'Etapa de pagamento devidamente finalizada.'),
+('2001-02-15', 5, 8, '2001-02-16', 'Transferência de titularidade registrada.'),
+('2001-02-18', 6, 8, '2001-02-24', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2007-09-14', 1, 7, '2007-09-14', 'Experiência de visita concluída com sucesso.'),
+('2007-09-16', 2, 7, '2007-09-18', 'Negociação avançando para um final positivo.'),
+('2007-09-20', 3, 7, '2007-09-22', 'Documentação em providência, tudo certo.'),
+('2007-09-24', 4, 7, '2007-09-25', 'Etapa de pagamento devidamente finalizada.'),
+('2007-09-27', 5, 7, '2007-09-29', 'Transferência de titularidade registrada.'),
+('2007-09-30', 6, 7, '2007-09-30', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('1998-05-30', 1, 6, '1998-05-30', 'Experiência de visita concluída com sucesso.'),
+('1998-05-31', 2, 6, '1998-05-31', 'Negociação avançando para um final positivo.'),
+('1998-06-01', 3, 6, '1998-06-02', 'Documentação em providência, tudo certo.'),
+('1998-06-04', 4, 6, '1998-06-05', 'Etapa de pagamento devidamente finalizada.'),
+('1998-06-08', 5, 6, '1998-06-08', 'Transferência de titularidade registrada.'),
+('1998-06-10', 6, 6, '1998-06-10', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2020-10-31', 1, 3, '2020-11-01', 'Experiência de visita concluída com sucesso.'),
+('2020-11-03', 2, 3, '2020-11-05', 'Negociação avançando para um final positivo.'),
+('2020-11-06', 3, 3, '2020-11-11', 'Documentação em providência, tudo certo.'),
+('2020-11-12', 4, 3, '2020-11-12', 'Etapa de pagamento devidamente finalizada.'),
+('2020-11-14', 5, 3, '2020-11-14', 'Transferência de titularidade registrada.'),
+('2020-11-15', 6, 3, '2020-11-20', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2022-10-05', 1, 27, '2022-10-05', 'Experiência de visita concluída com sucesso.'),
+('2022-10-07', 2, 27, '2022-10-09', 'Negociação avançando para um final positivo.'),
+('2022-10-10', 3, 27, '2022-10-12', 'Documentação em providência, tudo certo.'),
+('2022-10-13', 4, 27, '2022-10-15', 'Etapa de pagamento devidamente finalizada.'),
+('2022-10-16', 5, 27, '2022-10-18', 'Transferência de titularidade registrada.'),
+('2022-10-19', 6, 27, '2022-10-24', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2021-08-29', 1, 28, '2021-08-29', 'Experiência de visita concluída com sucesso.'),
+('2021-09-01', 2, 28, '2021-09-04', 'Negociação avançando para um final positivo.'),
+('2021-09-05', 3, 28, '2021-09-06', 'Documentação em providência, tudo certo.'),
+('2021-09-07', 4, 28, '2021-09-08', 'Etapa de pagamento devidamente finalizada.'),
+('2021-09-09', 5, 28, '2021-09-09', 'Transferência de titularidade registrada.'),
+('2021-09-10', 6, 28, '2021-09-13', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2023-04-15', 1, 29, '2023-04-15', 'Experiência de visita concluída com sucesso.'),
+('2023-04-18', 2, 29, '2023-04-20', 'Negociação avançando para um final positivo.'),
+('2023-04-21', 3, 29, '2023-04-22', 'Documentação em providência, tudo certo.'),
+('2023-04-24', 4, 29, '2023-04-27', 'Etapa de pagamento devidamente finalizada.'),
+('2023-04-28', 5, 29, '2023-04-29', 'Transferência de titularidade registrada.'),
+('2023-04-30', 6, 29, '2023-05-04', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2020-07-02', 1, 30, '2020-07-02', 'Experiência de visita concluída com sucesso.'),
+('2020-07-03', 2, 30, '2020-07-05', 'Negociação avançando para um final positivo.'),
+('2020-07-07', 3, 30, '2020-07-08', 'Documentação em providência, tudo certo.'),
+('2020-07-10', 4, 30, '2020-07-12', 'Etapa de pagamento devidamente finalizada.'),
+('2020-07-14', 5, 30, '2020-07-15', 'Transferência de titularidade registrada.'),
+('2020-07-17', 6, 30, '2020-07-24', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2018-09-25', 1, 31, '2018-09-25', 'Experiência de visita concluída com sucesso.'),
+('2018-09-27', 2, 31, '2018-09-30', 'Negociação avançando para um final positivo.'),
+('2018-10-02', 3, 31, '2018-10-04', 'Documentação em providência, tudo certo.'),
+('2018-10-06', 4, 31, '2018-10-08', 'Etapa de pagamento devidamente finalizada.'),
+('2018-10-10', 5, 31, '2018-10-12', 'Transferência de titularidade registrada.'),
+('2018-10-13', 6, 31, '2018-10-14', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+('2019-05-10', 1, 32, '2019-05-10', 'Experiência de visita concluída com sucesso.'),
+('2019-05-12', 2, 32, '2019-05-14', 'Negociação avançando para um final positivo.'),
+('2019-05-16', 3, 32, '2019-05-18', 'Documentação em providência, tudo certo.'),
+('2019-05-20', 4, 32, '2019-05-23', 'Etapa de pagamento devidamente finalizada.'),
+('2019-05-24', 5, 32, '2019-05-25', 'Transferência de titularidade registrada.'),
+('2019-05-27', 6, 32, '2019-05-29', 'Chaves na mão! Entrega do imóvel efetuada.'),
+
+
+('2018-03-24', 1, 33, '2018-03-24', 'Experiência de visita concluída com sucesso.'),
+('2018-03-27', 2, 33, '2018-03-29', 'Negociação avançando para um final positivo.'),
+('2018-03-30', 3, 33, '2018-04-04', 'Documentação em providência, tudo certo.'),
+('2018-04-07', 4, 33, '2018-04-10', 'Etapa de pagamento devidamente finalizada.'),
+('2018-04-11', 5, 33, '2018-04-11', 'Transferência de titularidade registrada.'),
+('2018-04-12', 6, 33, '2018-04-13', 'Chaves na mão! Entrega do imóvel efetuada.');
