@@ -1,0 +1,140 @@
+DROP TABLE envolve;
+DROP TABLE etapa;
+DROP TABLE compra;
+DROP TABLE pagamento;
+DROP TABLE aluguel;
+DROP TABLE contrato;
+DROP TABLE visita;
+DROP TABLE reparo;
+DROP TABLE vistoria;
+DROP TABLE propriedade;
+DROP TABLE imovel;
+DROP TABLE cliente;
+DROP TABLE corretor;
+
+
+
+CREATE TABLE cliente(
+	id_cliente integer PRIMARY KEY,
+	nome_cliente VARCHAR(30) NOT NULL,
+	cpf_cliente CHAR(11) NOT NULL,
+	sexo VARCHAR(10)
+);
+
+CREATE TABLE corretor(
+	id_corretor integer PRIMARY KEY,
+	nome_corretor VARCHAR(30) NOT NULL,
+	creci_corretor CHAR(8) NOT NULL --Todos são fisicos, o ultimo Caracter coloca F e o resto número
+);
+
+
+CREATE TABLE imovel(
+	id_imovel integer PRIMARY KEY,
+	endereco_cidade VARCHAR(100) NOT NULL,
+	endereco_logradouro VARCHAR(100) NOT NULL,
+	endereco_bairro VARCHAR(100) NOT NULL,
+	quantidade_quartos SMALLINT NOT NULL,
+	quantidade_banheiros SMALLINT NOT NULL,
+	lajotada SMALLINT NOT NULL,
+	tamanho_quintal VARCHAR(9) NOT NULL
+	
+);
+
+CREATE TABLE propriedade(
+	id_imovel integer,
+	id_cliente integer,
+	data_inicio DATE NOT NULL,
+	data_fim DATE,
+	
+	FOREIGN KEY (id_imovel) REFERENCES imovel(id_imovel),
+	FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+);
+
+
+CREATE TABLE vistoria(
+	id_vistoria integer PRIMARY KEY,
+	id_imovel integer,
+	data_vistoria DATE NOT NULL,
+	detalhamento_vistoria VARCHAR(200) NOT NULL,
+	situacao_vistoria VARCHAR(20) NOT NULL,
+	
+	FOREIGN KEY (id_imovel) REFERENCES imovel(id_imovel)
+);
+
+CREATE TABLE reparo(
+	id_reparo INTEGER PRIMARY KEY,
+	id_vistoria integer,
+	data_reparo DATE NOT NULL,
+	descricao VARCHAR(100) NOT NULL,
+	valor_reparo NUMERIC(10,2) NOT NULL,
+
+	FOREIGN KEY (id_vistoria) REFERENCES vistoria(id_vistoria)
+);
+
+CREATE TABLE visita(
+	id_visita INTEGER PRIMARY KEY,
+	id_cliente integer,
+	id_corretor integer,
+	id_imovel integer,
+	data_visita DATE NOT NULL,
+	classificacao VARCHAR(28) NOT NULL,
+	tipo_visita VARCHAR(8) NOT NULL,
+	
+	FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
+	FOREIGN KEY (id_corretor) REFERENCES corretor(id_corretor),
+	FOREIGN KEY (id_imovel) REFERENCES imovel(id_imovel)
+);
+
+
+CREATE TABLE contrato(
+	id_contrato INTEGER,
+	tipo_aluguel SMALLINT,
+
+	FOREIGN KEY (id_contrato) REFERENCES visita(id_visita),
+	PRIMARY KEY(id_contrato)
+);
+
+CREATE TABLE aluguel(
+	id_contrato INTEGER,
+	data_entrada_cliente DATE NOT NULL,
+	data_fechamento_negocio DATE NOT NULL,
+	preco_aluguel NUMERIC(10,2) NOT NULL,
+	
+	FOREIGN KEY (id_contrato) REFERENCES contrato(id_contrato),
+	PRIMARY KEY(id_contrato)
+);
+
+CREATE TABLE pagamento(
+	id_pagamento INTEGER PRIMARY KEY,
+	id_aluguel INTEGER,
+	data_pagamento DATE,
+	situacao_pagamento VARCHAR(45),
+
+	FOREIGN KEY (id_aluguel) REFERENCES aluguel(id_contrato)
+);
+
+CREATE TABLE compra(
+	id_contrato INTEGER,
+	observacao VARCHAR(100) NOT NULL,
+	preco_compra NUMERIC(10,2) NOT NULL,
+	
+	FOREIGN KEY (id_contrato) REFERENCES contrato(id_contrato),
+	PRIMARY KEY(id_contrato)
+);
+
+CREATE TABLE etapa(
+	codigo INTEGER PRIMARY KEY,
+	nome_etapa VARCHAR(26) NOT NULL,
+	ordem SMALLINT NOT NULL
+);
+
+CREATE TABLE envolve(
+	data_inicial DATE PRIMARY KEY,
+	codigo INTEGER,
+	id_contrato INTEGER,
+	data_final DATE,
+	observacoes VARCHAR(60),
+
+	FOREIGN KEY (id_contrato) REFERENCES compra(id_contrato),
+	FOREIGN KEY (codigo) REFERENCES etapa(codigo)
+);
